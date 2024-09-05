@@ -1,13 +1,112 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --light-blue: #31c3bd;
+  --light-blue-hover: #65e9e4;
+  --silver: #a8bfc9;
+  --silver-hover: #dbe8ed;
+  --semi-dark-navy: #1f3641;
+  --dark-navy: #1a2a33;
+  --light-yellow: #f2b137;
+  --light-yellow-hover: #ffc860;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+}
+
+.layout {
+  height: 100vh;
+  background-color: var(--dark-navy);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading-lg {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2.5px;
+}
+
+.heading-md {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.heading-sm {
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: 1.25px;
+}
+
+.heading-xs {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.body {
+  font-size: 0.875rem;
+  font-weight: medium;
+  letter-spacing: 0.88px;
+}
+
+.active {
+  background-color: var(--silver);
+}
+
+.active > svg > path {
+  fill: var(--dark-navy) !important;
+  stroke: none;
+}
+
+.win:has(img[alt="cross"]) {
+  background-color: var(--light-blue) !important;
+}
+
+.win:has(img[alt="circle"]) {
+  background-color: var(--light-yellow) !important;
+}
+
+.win > img {
+  filter: grayscale(1);
+  filter: contrast(0);
+}
+
+/* .cell:has(:not(img)):hover {
+  background-image: none !important;
+} */
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 480px) {
+  .layout {
+    padding: 1.5rem;
+  }
+
+  .heading-lg {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2.5px;
+  }
+
+  .logo {
+    width: 72px;
+    height: 36px;
+  }
+
+  .btnRestart img {
+    width: 1rem !important;
+    height: 1rem !important;
+  }
 }

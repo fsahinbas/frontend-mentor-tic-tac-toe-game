@@ -1,0 +1,107 @@
+.menu {
+  width: 28.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.playerPick {
+  background-color: var(--semi-dark-navy);
+  color: var(--silver);
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
+}
+
+.playerIcons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.players {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-navy);
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.625rem;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  border-radius: 0.625rem;
+  padding: 0.625rem;
+  cursor: pointer;
+  position: relative;
+}
+
+button:hover {
+  background-color: var(--semi-dark-navy);
+}
+
+button > svg {
+  width: 2.125rem;
+  height: 2.125rem;
+}
+
+path {
+  transform: scale(0.5);
+}
+
+.btn {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--dark-navy);
+  font-size: 1.25rem;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 1.25px;
+  font-weight: bold;
+}
+
+.cpu {
+  background-color: var(--light-yellow);
+  box-shadow: 0 -0.5rem 0 0 #cc8b13 inset;
+  margin-bottom: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.cpu:hover {
+  background-color: var(--light-yellow-hover);
+}
+
+.player {
+  background-color: var(--light-blue);
+  box-shadow: 0 -0.5rem 0 0 #118c87 inset;
+}
+
+.player:hover {
+  background-color: var(--light-blue-hover);
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 480px) {
+  .menu {
+    width: 100%;
+  }
+}

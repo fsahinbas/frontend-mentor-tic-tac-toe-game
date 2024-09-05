@@ -1,0 +1,47 @@
+.cell {
+  width: 8.75rem;
+  height: 8.75rem;
+  border-radius: 1rem;
+  box-shadow: 0 -0.5rem 0 0 #10212a inset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--semi-dark-navy);
+  cursor: pointer;
+  user-select: none;
+}
+
+[data-current-player="circle"] .cell:hover {
+  background-image: url("/public/assets/icon-o-outline.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+[data-current-player="cross"] .cell:hover {
+  background-image: url("/public/assets/icon-x-outline.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.cell:has(img):hover {
+  background-image: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  .cell {
+    width: 8.75rem;
+    height: 8.75rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cell {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .cell > img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
